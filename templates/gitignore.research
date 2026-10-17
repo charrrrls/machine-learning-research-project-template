@@ -1,0 +1,42 @@
+# Copy this file to .gitignore in your research repository.
+# Adjust paths to your project; review staged files before publishing.
+
+# Local environments and Python cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+configs/local/
+memory.md
+
+# Raw data and caches; retain data instructions and small split indices
+data/*
+!data/README.md
+!data/splits/
+
+# Generated runs and weights
+outputs/
+checkpoints/
+logs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+
+# Keep selected lightweight reference tables and explanations
+results/*
+!results/README.md
+!results/*.csv
+!results/*.json
+
+# OS and notebook metadata
+.DS_Store
+.ipynb_checkpoints/
