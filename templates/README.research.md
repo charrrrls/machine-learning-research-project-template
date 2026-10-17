@@ -49,6 +49,15 @@ python analysis/summarize.py --runs /path/to/run-records --output results/main_r
 | 基线 | <路径与命令> | <文件> | <运行目录> | <已验证／未运行> |
 | 消融 | <路径与命令> | <文件> | <运行目录> | <已验证／未运行> |
 
+## 论文结果追溯
+
+每张论文表／图填写一行，并关联到数据划分、方法、种子集合、指标单位和汇总规则。下面一行仅演示路径关系，未提供或执行对应实现；请替换成自己的实际记录。
+
+| 论文项 | 配置与执行入口 | 单次记录 | 汇总／绘图代码 | 公开结果 |
+|---|---|---|---|---|
+| 表1主实验（示意，未执行） | `configs/main.yaml`、`scripts/run_main.sh` | `outputs/<run-id>/metrics.json` | `analysis/summarize.py` | `results/main_results.csv` |
+| <表／图编号> | <配置和完整命令> | <实际记录位置> | <脚本与参数> | <结果文件或下载地址> |
+
 ## 评价与统计口径
 
 - 指标定义与单位：<例如 macro-mAP，使用 0–1 还是百分数>

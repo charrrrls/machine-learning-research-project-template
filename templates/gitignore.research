@@ -1,5 +1,6 @@
 # Copy this file to .gitignore in your research repository.
-# Adjust paths to your project; review staged files before publishing.
+# Merge with existing rules, adjust paths, and review staged files before publishing.
+# Allowed split files and CSV/JSON results still need content and size review.
 
 # Local environments and Python cache
 .venv/

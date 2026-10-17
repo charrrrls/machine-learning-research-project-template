@@ -8,6 +8,18 @@
 
 **文中的树是你可以采用的科研项目结构；本仓库交付的是指南与文档模板。** 本仓库不包含训练实现，无需安装依赖，也不会自动生成示意树中的 Python 文件。
 
+## 先拿走可用模板
+
+| 需要什么 | 预览 | 原始文件 | 保存位置 |
+|---|---|---|---|
+| 中文科研 README | [预览](templates/README.research.md) | [Markdown 原文](https://raw.githubusercontent.com/charrrrls/machine-learning-research-project-template/main/templates/README.research.md) | `README.md` 或 `README.zh-CN.md` |
+| 英文科研 README | [预览](templates/README.research.en.md) | [Markdown 原文](https://raw.githubusercontent.com/charrrrls/machine-learning-research-project-template/main/templates/README.research.en.md) | `README.md` |
+| 科研 gitignore | [预览](templates/gitignore.research) | [纯文本原文](https://raw.githubusercontent.com/charrrrls/machine-learning-research-project-template/main/templates/gitignore.research) | `.gitignore` |
+
+打开“原始文件”后复制或保存源文本，替换其中提示与示例。已有项目先合并需要的章节和忽略规则，保留原来有效的内容。
+
+两份 README 模板都包含论文结果追溯表：把每张论文表／图对应到配置、命令、单次记录、汇总代码和公开结果。
+
 ## 先解决你的问题
 
 | 你正在考虑什么 | 看哪里 |
@@ -17,6 +29,16 @@
 | README 应该写到什么程度？ | [可复制的科研 README 模板](templates/README.research.md) |
 | 数据、权重、日志和结果表哪些上传？ | [复现与发布说明](docs/reproducibility.md)和[gitignore 模板](templates/gitignore.research) |
 | 想直接参考别人的完整项目模板？ | [四个原始项目与选型建议](docs/references.md) |
+
+## 先按规模选布局
+
+| 项目情况 | 从什么结构开始 | 什么时候再拆分 |
+|---|---|---|
+| 一个数据集、几份脚本 | 平铺数据、方法、训练、评估与一个配置文件 | 开始重复复制函数时 |
+| 单篇论文，包含基线和消融 | 下方标准结构，共享一套方法与评价实现 | 配置与运行记录难以区分时 |
+| 多人、多组实验的长期项目 | 保留标准源码，按实验与运行分组配置和产物 | 确有配置组合或追踪需求时再引入工具 |
+
+完整示例见[三种规模的目录详解](docs/project-structure.md#先按规模选择)。方法不需要的模型、损失和脚本可以合并或省略。
 
 ## 适合单篇论文的推荐结构
 
@@ -77,6 +99,12 @@ paper-project/
 
 采用示例的 `src/my_method/` 包布局时，需要配套的 `pyproject.toml` 和安装步骤；单独安装 `requirements.txt` 不会自动使自己的包可导入。[具体示例](docs/project-structure.md#src布局如何正确导入)
 
+## 论文结果要能找到对应代码
+
+每张表、每幅图都应能追溯到实际运行的配置与命令、数据划分、种子集合、单次指标记录和处理脚本。这样读者可以定位论文数字，作者也能在修订图表时找到来源。
+
+[中文 README 模板](templates/README.research.md#论文结果追溯)和[英文模板](templates/README.research.en.md#paper-result-traceability)已经准备好可填写的追溯表，并将示意行明确标为未执行的例子。
+
 ## 数据到论文结果怎样串起来
 
 ```text
@@ -116,6 +144,8 @@ paper-project/
 推荐目录是参考这些项目后整理的原创综合建议。具体出处与各自限制见[参考文档](docs/references.md)，并非某个仓库的原样目录或官方统一规范。
 
 ## 贡献与许可
+
+如果这份指南帮你节省了整理项目的时间，可以 Star 保存以便以后查用。
 
 欢迎通过 Issue 或 Pull Request 提出错误修正、使用中的疑问和更清楚的示例。引用外部实践时附原始来源。
 
