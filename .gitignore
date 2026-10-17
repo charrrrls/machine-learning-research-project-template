@@ -1,0 +1,14 @@
+# Local work records and machine-specific configuration
+memory.md
+configs/local/
+
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+
+# macOS metadata
+.DS_Store
